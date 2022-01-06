@@ -1,0 +1,3 @@
+configuration-name: sonar
+driver-module: madis.sensors.dummy
+driver-class: DummySensorSonar

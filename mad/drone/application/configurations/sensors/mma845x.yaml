@@ -1,0 +1,5 @@
+configuration-name: inclinometer
+driver-module: madis.sensors.sensor_mma845x
+driver-class: MMA845XSensor
+# herz
+frequency: 20

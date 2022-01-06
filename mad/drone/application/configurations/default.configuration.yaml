@@ -1,0 +1,91 @@
+
+# PRELOAD action to do
+# NEED TO IMPLEMENT - NOT NOW because I need to realize flight-controller
+preload:
+  command-to-exec-before:
+  wait-at-boot: True
+  seconds-to-wait: 0
+  command-to-exec-after:
+
+#-------------------------------------------------------------------------------------
+
+#=====================================================
+#      S E N S O R S   C O N F I G U R A T I O N
+#=====================================================
+
+motors-configuration:
+  - single-motor-configuration:
+      enable: true
+      id: 1
+      gpio_pin: 20
+      min_value: 1100
+      max_value: 1700
+      driver-module: madis.core.motors
+      driver-class: Motor
+
+  - single-motor-configuration:
+      enable: true
+      id: 2
+      gpio_pin: 16
+      min_value: 1100
+      max_value: 1700
+      driver-module: madis.core.motors
+      driver-class: Motor
+
+  - single-motor-configuration:
+      enable: false
+      id: 3
+      gpio_pin: 17
+      min_value: 1100
+      max_value: 1700
+      driver-module: madis.core.motors
+      driver-class: Motor
+
+  - single-motor-configuration:
+      enable: false
+      id: 4
+      gpio_pin: 18
+      min_value: 1100
+      max_value: 1700
+      driver-module: madis.core.motors
+      driver-class: Motor
+
+
+#-------------------------------------------------------------------------------------
+
+sensors-configuration:
+  # Configuration for GPS
+  gps-configuration: sensors/bn880.yaml
+  #gps-configuration: sensors/dummy_gps.yaml
+
+  # Configuration for Accelerometer/Gyroscope
+  accelerometer_gyroscope-configuration: sensors/mma845x.yaml
+  #accelerometer_gyroscope-configuration: sensors/dummy_accel_gyro.yaml
+
+  # Configuration for Sonar (Obstacle Avoidance)
+  #obstacle-avoidance-configuration: sensors/dummy_sonar.yaml
+
+  # Configuration for Enviromental sensor
+  environmental-configuration: sensors/bme280.yaml
+  #environmental-configuration: sensors/dummy_temp_pressure.yaml
+
+#-------------------------------------------------------------------------------------
+
+network-configuration:
+  - udp-server-configuration:
+      sensor: gps
+      port: 10000
+      # hertz
+      interval: 1
+
+  - udp-server-configuration:
+      sensor: environmental
+      port: 10001
+      # hertz
+      interval: 1
+
+  - udp-server-configuration:
+      sensor: inclinometer
+      port: 10002
+      # hertz
+      interval: 10

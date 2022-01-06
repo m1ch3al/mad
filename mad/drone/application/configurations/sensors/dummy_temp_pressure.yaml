@@ -1,0 +1,5 @@
+configuration-name: environmental
+driver-module: madis.sensors.dummy
+driver-class: DummySensorTempPressureAltitude
+# herz
+frequency: 10

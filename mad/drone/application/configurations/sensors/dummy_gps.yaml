@@ -1,0 +1,9 @@
+configuration-name: gps
+driver-module: madis.sensors.dummy
+driver-class: DummySensorGPS
+
+# herz
+frequency: 10
+
+serial-port: ~
+baudrate: ~

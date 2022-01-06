@@ -1,0 +1,5 @@
+configuration-name: environmental
+driver-module: madis.sensors.sensor_bme280
+driver-class: BME280Sensor
+# herz
+frequency: 10
