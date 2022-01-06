@@ -16,7 +16,6 @@ Author: SIROLA RENATO
 """
 
 from abc import ABC, abstractmethod
-from mad.drone.utils.date_time import from_str, date2epoch
 
 
 class Sensor(ABC):
@@ -30,6 +29,3 @@ class Sensor(ABC):
     @abstractmethod
     def read_from_sensor(self):
         pass
-
-    def get_utc_time(self):
-        return date2epoch(from_str("now", is_utc=True))

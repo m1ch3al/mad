@@ -1,5 +1,5 @@
-configuration-name: inclinometer
-driver-module: madis.sensors.dummy
+configuration-name: stabilizer
+driver-module: mad.drone.sensors.dummy
 driver-class: DummySensorAccelGyro
 # herz
 frequency: 100

@@ -43,7 +43,8 @@ setup(
               'mad.drone.application.configurations.sensors',
               'mad.drone.core',
               'mad.drone.sensors',
-              'mad.drone.utils'
+              'mad.drone.utils',
+              'mad.tests'
               ]
 )
 

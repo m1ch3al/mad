@@ -1,5 +1,5 @@
-configuration-name: environmental
-driver-module: madis.sensors.dummy
-driver-class: DummySensorTempPressureAltitude
+configuration-name: environment
+driver-module: mad.drone.sensors.dummy
+driver-class: DummySensorEnvironment
 # herz
 frequency: 10

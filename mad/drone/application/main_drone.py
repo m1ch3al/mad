@@ -39,6 +39,8 @@ def main():
         return -1
     logger.debug("Start parsing configuration")
 
+    
+
 
 if __name__ == "__main__":
     main()

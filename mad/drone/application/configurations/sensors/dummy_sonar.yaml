@@ -1,3 +1,5 @@
-configuration-name: sonar
-driver-module: madis.sensors.dummy
+configuration-name: obstacle-avoidance
+driver-module: mad.drone.sensors.dummy
 driver-class: DummySensorSonar
+# herz
+frequency: 10

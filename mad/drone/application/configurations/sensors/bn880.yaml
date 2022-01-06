@@ -1,5 +1,0 @@
-configuration-name: gps
-driver-module: madis.sensors.sensor_bn880
-driver-class: BN880Sensor
-# herz
-frequency: 10

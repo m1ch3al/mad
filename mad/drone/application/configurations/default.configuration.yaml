@@ -55,19 +55,16 @@ motors-configuration:
 
 sensors-configuration:
   # Configuration for GPS
-  gps-configuration: sensors/bn880.yaml
-  #gps-configuration: sensors/dummy_gps.yaml
+  gps: sensors/dummy_gps.yaml
 
   # Configuration for Accelerometer/Gyroscope
-  accelerometer_gyroscope-configuration: sensors/mma845x.yaml
-  #accelerometer_gyroscope-configuration: sensors/dummy_accel_gyro.yaml
+  stabilizer: sensors/dummy_gyro.yaml
 
   # Configuration for Sonar (Obstacle Avoidance)
-  #obstacle-avoidance-configuration: sensors/dummy_sonar.yaml
+  obstacle-avoidance: sensors/dummy_sonar.yaml
 
   # Configuration for Enviromental sensor
-  environmental-configuration: sensors/bme280.yaml
-  #environmental-configuration: sensors/dummy_temp_pressure.yaml
+  environment: sensors/dummy_temp_pressure.yaml
 
 #-------------------------------------------------------------------------------------
 
@@ -85,7 +82,7 @@ network-configuration:
       interval: 1
 
   - udp-server-configuration:
-      sensor: inclinometer
+      sensor: gyro
       port: 10002
       # hertz
       interval: 10
