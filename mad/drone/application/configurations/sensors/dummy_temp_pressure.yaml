@@ -1,5 +1,11 @@
 configuration-name: environment
-driver-module: mad.drone.sensors.dummy
-driver-class: DummySensorEnvironment
+
+publisher-module: mad.drone.core.publishers.sensor_publisher
+publisher-class: SensorPublisher
+
+sensor-module: mad.drone.sensors.dummy
+sensor-class: DummySensorEnvironment
+sensor-parameters: []
+
 # herz
-frequency: 10
+frequency: 1

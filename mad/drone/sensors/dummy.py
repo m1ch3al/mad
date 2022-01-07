@@ -27,7 +27,7 @@ from mad.drone.utils.date_time import from_str
 
 
 class DummySensorGPS(Sensor):
-    def __init__(self):
+    def __init__(self, serial_port, baud_rate):
         Sensor.__init__(self)
         self._gps_time = None
         self._altitude = None

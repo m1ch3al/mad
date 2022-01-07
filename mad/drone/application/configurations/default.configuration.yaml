@@ -58,7 +58,7 @@ sensors-configuration:
   gps: sensors/dummy_gps.yaml
 
   # Configuration for Accelerometer/Gyroscope
-  stabilizer: sensors/dummy_gyro.yaml
+  stabilizer: sensors/dummy_accel_gyro.yaml
 
   # Configuration for Sonar (Obstacle Avoidance)
   obstacle-avoidance: sensors/dummy_sonar.yaml

@@ -42,6 +42,7 @@ setup(
               'mad.drone.application.configurations',
               'mad.drone.application.configurations.sensors',
               'mad.drone.core',
+              'mad.drone.core.publishers',
               'mad.drone.sensors',
               'mad.drone.utils',
               'mad.tests'

@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37047b04-55b5-480c-9c5f-574b1ff07e3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/mad.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mad/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mad/tests/test_dummy_sensors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MAD - M1ch3al Autonomous Drone.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mad/drone/core/publishers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mad/drone/core/publishers/sensor_publisher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mad/drone/utils/configuration_reader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/default.configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/default.configuration.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/bme280.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/bn880.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_accel_gyro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_accel_gyro.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_gps.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_gps.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_sonar.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_sonar.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_temp_pressure.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_temp_pressure.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/mma845x.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mad/drone/application/main_drone.py" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/main_drone.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/sensors/dummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/sensors/dummy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mad/drone/sensors/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/sensors/sensor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +48,28 @@
       <recent name="$PROJECT_DIR$/mad" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_dummy_sensors.TestDummySensors.test_dummy_gyro_sensor">
+  <component name="RunManager" selected="Python.main_drone">
+    <configuration name="main_drone" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="mad" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mad/drone/application" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mad/drone/application/main_drone.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for test_dummy_sensors.TestDummySensors.test_dummy_environment" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="mad" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main_drone" />
         <item itemvalue="Python tests.Unittests for test_dummy_sensors.TestDummySensors.test_dummy_gyro_sensor" />
         <item itemvalue="Python tests.Unittests for test_dummy_sensors.TestDummySensors.test_dummy_sonar" />
         <item itemvalue="Python tests.Unittests for test_dummy_sensors.TestDummySensors.test_dummy_environment" />
@@ -142,5 +158,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/mad/drone/application/main_drone.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

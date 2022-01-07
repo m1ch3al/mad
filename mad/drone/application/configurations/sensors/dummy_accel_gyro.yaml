@@ -1,5 +1,11 @@
 configuration-name: stabilizer
-driver-module: mad.drone.sensors.dummy
-driver-class: DummySensorAccelGyro
+
+publisher-module: mad.drone.core.publishers.sensor_publisher
+publisher-class: SensorPublisher
+
+sensor-module: mad.drone.sensors.dummy
+sensor-class: DummySensorAccelGyro
+sensor-parameters: []
+
 # herz
-frequency: 100
+frequency: 1

@@ -1,9 +1,12 @@
 configuration-name: gps
-driver-module: madis.sensors.dummy
-driver-class: DummySensorGPS
+
+publisher-module: mad.drone.core.publishers.sensor_publisher
+publisher-class: SensorPublisher
+
+sensor-module: mad.drone.sensors.dummy
+sensor-class: DummySensorGPS
+sensor-parameters: ["/dev/ttyS1", 9600]
 
 # herz
-frequency: 10
+frequency: 1
 
-serial-port: ~
-baudrate: ~

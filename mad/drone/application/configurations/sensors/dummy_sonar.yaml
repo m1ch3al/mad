@@ -1,5 +1,11 @@
 configuration-name: obstacle-avoidance
-driver-module: mad.drone.sensors.dummy
-driver-class: DummySensorSonar
+
+publisher-module: mad.drone.core.publishers.sensor_publisher
+publisher-class: SensorPublisher
+
+sensor-module: mad.drone.sensors.dummy
+sensor-class: DummySensorSonar
+sensor-parameters: []
+
 # herz
-frequency: 10
+frequency: 1
