@@ -7,5 +7,5 @@ sensor-module: mad.drone.sensors.dummy
 sensor-class: DummySensorEnvironment
 sensor-parameters: []
 
-# herz
+# hertz
 frequency: 1

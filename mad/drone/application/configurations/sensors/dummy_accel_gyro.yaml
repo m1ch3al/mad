@@ -7,5 +7,5 @@ sensor-module: mad.drone.sensors.dummy
 sensor-class: DummySensorAccelGyro
 sensor-parameters: []
 
-# herz
-frequency: 1
+# hertz
+frequency: 100

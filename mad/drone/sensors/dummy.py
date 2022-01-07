@@ -23,7 +23,7 @@ A dummy set of sensors for simulate data inside the DRONE.
 from mad.drone.sensors.sensor import Sensor
 import random
 import json
-from mad.drone.utils.date_time import from_str
+from mad.drone.utils.date_time import from_str, date2string
 
 
 class DummySensorGPS(Sensor):
@@ -55,7 +55,7 @@ class DummySensorGPS(Sensor):
         self._hdop = round(random.uniform(0.8, 1.5), 1)
         self._mode = 1
         self._satellites = random.randint(9, 14)
-        self._gps_time = from_str("now", is_utc=True)
+        self._gps_time = date2string(from_str("now", is_utc=True))
 
         self._data["time"] = self._gps_time
         self._data["latitude"] = self._latitude

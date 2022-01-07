@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37047b04-55b5-480c-9c5f-574b1ff07e3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mad/drone/core/publishers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mad/drone/core/publishers/sensor_publisher.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mad/drone/utils/configuration_reader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mad/drone/core/subscribers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mad/drone/core/subscribers/sensor_network_distributor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/default.configuration.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/default.configuration.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_accel_gyro.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_accel_gyro.yaml" afterDir="false" />
@@ -13,7 +12,7 @@
       <change beforePath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_temp_pressure.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/configurations/sensors/dummy_temp_pressure.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/application/main_drone.py" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/application/main_drone.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mad/drone/sensors/dummy.py" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/sensors/dummy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mad/drone/utils/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/mad/drone/utils/network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,16 +157,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mad/drone/application/main_drone.py</url>
-          <line>78</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -16,33 +16,15 @@ Author: SIROLA RENATO
 """
 
 import threading
-from mad.drone.utils.fileystem import *
-from mad.drone.utils.logger import *
+
 from mad.drone.utils.blackboard import BlackBoard
 from mad.drone.utils.configuration_reader import read_multiple_file_configuration, instantiate_class
-from pubsub import pub
-
+from mad.drone.utils.fileystem import *
+from mad.drone.utils.logger import *
 
 CONFIG_FOLDER = ".mad"
 CONFIGURATION_FILENAME = "default.configuration.yaml"
 LOGGER_FILENAME = "logger.configuration.yaml"
-
-
-def listener_GPS(sensor_data):
-    print("gps data: {}".format(sensor_data))
-
-
-def listener_GYRO(sensor_data):
-    print("gyro data: {}".format(sensor_data))
-
-
-def listener_ENV(sensor_data):
-    print("env data: {}".format(sensor_data))
-
-
-def listener_SONAR(sensor_data):
-    print("sonar data: {}".format(sensor_data))
-
 
 
 def main():
@@ -61,10 +43,13 @@ def main():
 
     drone_configuration = read_multiple_file_configuration(config_dir)
 
-    pub.subscribe(listener_GPS, 'gps')
-    pub.subscribe(listener_ENV, 'environment')
-    pub.subscribe(listener_GYRO, 'stabilizer')
-    pub.subscribe(listener_SONAR, 'obstacle-avoidance')
+    # Lists of network subscribers
+    for element in drone_configuration["network-configuration"]:
+        module_name = element["udp-client-configuration"]["distributor-module"]
+        class_name = element["udp-client-configuration"]["distributor-class"]
+        parameters = element["udp-client-configuration"]["parameters"]
+        distributor = instantiate_class(class_name, module_name, parameters)
+        blackboard.insert_value(element["udp-client-configuration"]["name"], distributor, 0)
 
     # start publishers
     for element in drone_configuration["sensors-configuration"].copy():

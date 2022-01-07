@@ -7,6 +7,6 @@ sensor-module: mad.drone.sensors.dummy
 sensor-class: DummySensorGPS
 sensor-parameters: ["/dev/ttyS1", 9600]
 
-# herz
+# hertz
 frequency: 1
 

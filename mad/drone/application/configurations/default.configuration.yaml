@@ -69,20 +69,32 @@ sensors-configuration:
 #-------------------------------------------------------------------------------------
 
 network-configuration:
-  - udp-server-configuration:
+  - udp-client-configuration:
       sensor: gps
-      port: 10000
-      # hertz
-      interval: 1
+      name: gps_network_distributor
+      distributor-module: mad.drone.core.subscribers.sensor_network_distributor
+      distributor-class: SensorNetworkDistributor
+      parameters: ["gps", "127.0.0.1", 10000]
 
-  - udp-server-configuration:
-      sensor: environmental
-      port: 10001
-      # hertz
-      interval: 1
+  - udp-client-configuration:
+      sensor: stabilizer
+      name: stabilizer_network_distributor
+      distributor-module: mad.drone.core.subscribers.sensor_network_distributor
+      distributor-class: SensorNetworkDistributor
+      parameters: ["stabilizer", "127.0.0.1", 10001]
 
-  - udp-server-configuration:
-      sensor: gyro
-      port: 10002
-      # hertz
-      interval: 10
+  - udp-client-configuration:
+      sensor: obstacle-avoidance
+      name: obstacle_avoidance_network_distributor
+      distributor-module: mad.drone.core.subscribers.sensor_network_distributor
+      distributor-class: SensorNetworkDistributor
+      parameters: ["obstacle-avoidance", "127.0.0.1", 10002]
+
+  - udp-client-configuration:
+      sensor: environment
+      name: environment_network_distributor
+      distributor-module: mad.drone.core.subscribers.sensor_network_distributor
+      distributor-class: SensorNetworkDistributor
+      parameters: ["environment", "127.0.0.1", 10003]
+
+
